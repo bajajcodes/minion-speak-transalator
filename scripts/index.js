@@ -21,6 +21,7 @@ function updateText(txt){
             return response.json()
         })
         .then( (data) => {
+            console.log(data);
             if(!data.contents){
                 alert(data.error.message);
             }else{
