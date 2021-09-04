@@ -25,6 +25,7 @@ function updateText(txt){
             console.log(data);
             if(!data.contents){
                 alert(data.error.message);
+                input_text.value = "";
             }else{
                 // console.log(data.contents);
                 // console.log(data.contents.translated);
@@ -57,7 +58,7 @@ function transalte(e){
     // }else{
     //     input_text.value = "";
     // }
-    
+
 }
 
 transalte_btn.addEventListener("click",transalte);  
