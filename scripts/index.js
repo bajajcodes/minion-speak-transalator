@@ -26,9 +26,10 @@ function updateText(txt){
             if(!data.contents){
                 alert(data.error.message);
             }else{
-                console.log(data.contents);
-                console.log(data.contents.translated);
-                minion_speak = data.contents.translated;
+                // console.log(data.contents);
+                // console.log(data.contents.translated);
+                // minion_speak = data.contents.translated;
+                updateText(data.contents.translated);
             }
         })
         .catch(excep => {
@@ -36,8 +37,8 @@ function updateText(txt){
             console.log(excep);
         
         })
-    console.log({minion_speak});
-    return minion_speak;
+    // console.log({minion_speak});
+    // return minion_speak;
 }
 
 function transalte(e){
@@ -45,17 +46,18 @@ function transalte(e){
 
     if(user_text){
         minion_text.innerText = "";
-        minion_speak = getMinionText(user_text);
+        getMinionText(user_text);
     }
 
     console.log({user_text});
-    console.log({minion_speak});
+    // console.log({minion_speak});
 
-    if(minion_speak){
-        updateText(minion_speak);
-    }else{
-        input_text.value = "";
-    }
+    // if(minion_speak){
+    //     updateText(minion_speak);
+    // }else{
+    //     input_text.value = "";
+    // }
+    
 }
 
 transalte_btn.addEventListener("click",transalte);  
