@@ -26,6 +26,8 @@ function updateText(txt){
             if(!data.contents){
                 alert(data.error.message);
             }else{
+                console.log(data.contents);
+                console.log(data.contents.translated);
                 minion_speak = data.contents.translated;
             }
         })
