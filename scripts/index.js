@@ -7,6 +7,8 @@ let api_transaltion_end_point = "minion.json"
 let minion_speak = "";
 
 function updateText(txt){
+    console.log({minion_text});
+    debugger;
     minion_text.innerText = txt;    
 }
 
@@ -44,6 +46,9 @@ function transalte(e){
         minion_text.innerText = "";
         minion_speak = getMinionText(user_text);
     }
+
+    console.log({user_text});
+    console.log({minion_speak});
 
     if(minion_speak){
         updateText(minion_speak);
