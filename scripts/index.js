@@ -8,8 +8,7 @@ let minion_speak = "";
 
 function updateText(txt){
     console.log({minion_text});
-    debugger;
-    minion_text.innerText = txt;    
+        minion_text.innerText = txt;    
 }
 
  function getMinionText(user_text){
@@ -35,7 +34,7 @@ function updateText(txt){
             console.log(excep);
         
         })
-
+    console.log({minion_speak});
     return minion_speak;
 }
 
