@@ -25,7 +25,7 @@ function updateText(txt){
             if(!data.contents){
                 alert(data.error.message);
             }else{
-                minion_speak = datat.contents.translated;
+                minion_speak = data.contents.translated;
             }
         })
         .catch(excep => {
